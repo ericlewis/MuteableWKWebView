@@ -2,7 +2,7 @@
 [![License](https://img.shields.io/github/license/masakih/WKWebKitMuteExt.svg)](https://github.com/masakih/WKWebKitMuteExt/blob/master/LICENSE)
 [![GitHub release](https://img.shields.io/github/release/masakih/WKWebKitMuteExt.svg)](https://github.com/masakih/WKWebKitMuteExt/releases/latest)
 
-# MuteableWKWebView
+# MuteableWKWebView (SwiftPM)
 
 Mute per WKWebView like Safari.
 
