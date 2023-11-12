@@ -20,7 +20,7 @@
 const char *pagePropertyName = "_page";
 const char *WKWebViewClassName = "WKWebView";
 
-static bool checkPageProperty() {
+static bool checkPageProperty(void) {
     
     static bool foundPageProperty = false;
     if( foundPageProperty ) return true;
