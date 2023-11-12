@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C07B4BF32B00B66F0075770C /* getPage.c in Sources */ = {isa = PBXBuildFile; fileRef = F4AAA1441F6D52D000975E87 /* getPage.c */; };
+		C07B4BF42B00B6760075770C /* MuteableWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4AAA1481F6D52D000975E87 /* MuteableWKWebView.m */; };
+		C07B4BF52B00B67A0075770C /* SearchSymbol.m in Sources */ = {isa = PBXBuildFile; fileRef = F4AAA14A1F6D52D000975E87 /* SearchSymbol.m */; };
+		C07B4BFD2B00B6B60075770C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07B4BFC2B00B6B60075770C /* AppDelegate.swift */; };
+		C07B4BFF2B00B6B70075770C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C07B4BFE2B00B6B70075770C /* Assets.xcassets */; };
+		C07B4C022B00B6B70075770C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C07B4C002B00B6B70075770C /* MainMenu.xib */; };
+		C07B4C082B00B7870075770C /* MuteableWKWebView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4AAA1261F6D4CDF00975E87 /* MuteableWKWebView.framework */; };
+		C07B4C092B00B7870075770C /* MuteableWKWebView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F4AAA1261F6D4CDF00975E87 /* MuteableWKWebView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F45F3BC81E02DFA50009434E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F45F3BC71E02DFA50009434E /* AppDelegate.m */; };
 		F45F3BCB1E02DFA50009434E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F45F3BCA1E02DFA50009434E /* main.m */; };
 		F45F3BCD1E02DFA50009434E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F45F3BCC1E02DFA50009434E /* Assets.xcassets */; };
@@ -27,16 +35,20 @@
 		F4AAA13D1F6D4E6500975E87 /* MuteableWKWebView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4AAA1261F6D4CDF00975E87 /* MuteableWKWebView.framework */; };
 		F4AAA13E1F6D4E6500975E87 /* MuteableWKWebView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F4AAA1261F6D4CDF00975E87 /* MuteableWKWebView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F4AAA1421F6D4EEB00975E87 /* WindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = F48E7CA71ECB4E6700025B61 /* WindowController.m */; };
-		F4AAA14B1F6D52D000975E87 /* getPage.c in Sources */ = {isa = PBXBuildFile; fileRef = F4AAA1441F6D52D000975E87 /* getPage.c */; };
 		F4AAA14C1F6D52D000975E87 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4AAA1461F6D52D000975E87 /* Info.plist */; };
-		F4AAA14D1F6D52D000975E87 /* MuteableWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4AAA1481F6D52D000975E87 /* MuteableWKWebView.m */; };
-		F4AAA14E1F6D52D000975E87 /* SearchSymbol.m in Sources */ = {isa = PBXBuildFile; fileRef = F4AAA14A1F6D52D000975E87 /* SearchSymbol.m */; };
 		F4AAA14F1F6D530D00975E87 /* MuteableWKWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = F4AAA1471F6D52D000975E87 /* MuteableWKWebView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F4EE51DD2035BF5700255E96 /* MethodSwizzler.h in Headers */ = {isa = PBXBuildFile; fileRef = F4EE51DB2035BF5700255E96 /* MethodSwizzler.h */; };
 		F4EE51DE2035BF5700255E96 /* MethodSwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EE51DC2035BF5700255E96 /* MethodSwizzler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C07B4C0A2B00B7870075770C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F45F3BBB1E02DFA50009434E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4AAA1251F6D4CDF00975E87;
+			remoteInfo = MuteableWKWebView;
+		};
 		F4AAA13F1F6D4E6500975E87 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F45F3BBB1E02DFA50009434E /* Project object */;
@@ -47,6 +59,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		C07B4C0C2B00B7870075770C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C07B4C092B00B7870075770C /* MuteableWKWebView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F4AAA1411F6D4E6500975E87 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -61,6 +84,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C07B4BFA2B00B6B60075770C /* TestSoundsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestSoundsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C07B4BFC2B00B6B60075770C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C07B4BFE2B00B6B70075770C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C07B4C012B00B6B70075770C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C07B4C032B00B6B70075770C /* TestSoundsSwift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestSoundsSwift.entitlements; sourceTree = "<group>"; };
+		C07B4C072B00B7810075770C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F45F3BC31E02DFA50009434E /* TestSounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestSounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45F3BC61E02DFA50009434E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F45F3BC71E02DFA50009434E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -108,6 +137,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C07B4BF72B00B6B60075770C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C07B4C082B00B7870075770C /* MuteableWKWebView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F45F3BC01E02DFA50009434E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -128,12 +165,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C07B4BFB2B00B6B60075770C /* TestSoundsSwift */ = {
+			isa = PBXGroup;
+			children = (
+				C07B4C072B00B7810075770C /* Info.plist */,
+				C07B4BFC2B00B6B60075770C /* AppDelegate.swift */,
+				C07B4BFE2B00B6B70075770C /* Assets.xcassets */,
+				C07B4C002B00B6B70075770C /* MainMenu.xib */,
+				C07B4C032B00B6B70075770C /* TestSoundsSwift.entitlements */,
+			);
+			path = TestSoundsSwift;
+			sourceTree = "<group>";
+		};
 		F45F3BBA1E02DFA50009434E = {
 			isa = PBXGroup;
 			children = (
 				F4AAA1271F6D4CDF00975E87 /* MuteableWKWebView */,
 				F48E7CBE1ED0033700025B61 /* HTSymbolHook */,
 				F45F3BC51E02DFA50009434E /* Test */,
+				C07B4BFB2B00B6B60075770C /* TestSoundsSwift */,
 				F45F3BC41E02DFA50009434E /* Products */,
 				F45F3BD71E02DFF40009434E /* Frameworks */,
 			);
@@ -144,6 +194,7 @@
 			children = (
 				F45F3BC31E02DFA50009434E /* TestSounds.app */,
 				F4AAA1261F6D4CDF00975E87 /* MuteableWKWebView.framework */,
+				C07B4BFA2B00B6B60075770C /* TestSoundsSwift.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -260,6 +311,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		C07B4BF92B00B6B60075770C /* TestSoundsSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C07B4C042B00B6B70075770C /* Build configuration list for PBXNativeTarget "TestSoundsSwift" */;
+			buildPhases = (
+				C07B4BF62B00B6B60075770C /* Sources */,
+				C07B4BF72B00B6B60075770C /* Frameworks */,
+				C07B4BF82B00B6B60075770C /* Resources */,
+				C07B4C0C2B00B7870075770C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C07B4C0B2B00B7870075770C /* PBXTargetDependency */,
+			);
+			name = TestSoundsSwift;
+			productName = TestSoundsSwift;
+			productReference = C07B4BFA2B00B6B60075770C /* TestSoundsSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
 		F45F3BC21E02DFA50009434E /* TestSounds */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F45F3BD41E02DFA50009434E /* Build configuration list for PBXNativeTarget "TestSounds" */;
@@ -304,9 +374,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 1510;
 				LastUpgradeCheck = 1510;
 				ORGANIZATIONNAME = "Hori,Masaki";
 				TargetAttributes = {
+					C07B4BF92B00B6B60075770C = {
+						CreatedOnToolsVersion = 15.1;
+					};
 					F45F3BC21E02DFA50009434E = {
 						CreatedOnToolsVersion = 8.2;
 						ProvisioningStyle = Automatic;
@@ -332,11 +406,21 @@
 			targets = (
 				F45F3BC21E02DFA50009434E /* TestSounds */,
 				F4AAA1251F6D4CDF00975E87 /* MuteableWKWebView */,
+				C07B4BF92B00B6B60075770C /* TestSoundsSwift */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C07B4BF82B00B6B60075770C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C07B4BFF2B00B6B70075770C /* Assets.xcassets in Resources */,
+				C07B4C022B00B6B70075770C /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F45F3BC11E02DFA50009434E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -358,16 +442,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C07B4BF62B00B6B60075770C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C07B4BFD2B00B6B60075770C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F45F3BBF1E02DFA50009434E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F45F3BCB1E02DFA50009434E /* main.m in Sources */,
-				F4AAA14D1F6D52D000975E87 /* MuteableWKWebView.m in Sources */,
 				F45F3BC81E02DFA50009434E /* AppDelegate.m in Sources */,
 				F4AAA1421F6D4EEB00975E87 /* WindowController.m in Sources */,
-				F4AAA14B1F6D52D000975E87 /* getPage.c in Sources */,
-				F4AAA14E1F6D52D000975E87 /* SearchSymbol.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +464,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C07B4BF42B00B6760075770C /* MuteableWKWebView.m in Sources */,
 				F4AAA1321F6D4D7800975E87 /* HTSymbolHook.m in Sources */,
 				F4AAA1331F6D4D7B00975E87 /* mach_override.c in Sources */,
 				F4AAA1341F6D4D7F00975E87 /* test_mach_override.cp in Sources */,
@@ -382,16 +472,23 @@
 				F4AAA1361F6D4D8700975E87 /* input.c in Sources */,
 				F4AAA1371F6D4D8A00975E87 /* itab.c in Sources */,
 				F4EE51DE2035BF5700255E96 /* MethodSwizzler.m in Sources */,
+				C07B4BF32B00B66F0075770C /* getPage.c in Sources */,
 				F4AAA1381F6D4D8C00975E87 /* syn-att.c in Sources */,
 				F4AAA1391F6D4D8F00975E87 /* syn-intel.c in Sources */,
 				F4AAA13A1F6D4D9300975E87 /* syn.c in Sources */,
 				F4AAA13B1F6D4D9500975E87 /* udis86.c in Sources */,
+				C07B4BF52B00B67A0075770C /* SearchSymbol.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C07B4C0B2B00B7870075770C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4AAA1251F6D4CDF00975E87 /* MuteableWKWebView */;
+			targetProxy = C07B4C0A2B00B7870075770C /* PBXContainerItemProxy */;
+		};
 		F4AAA1401F6D4E6500975E87 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F4AAA1251F6D4CDF00975E87 /* MuteableWKWebView */;
@@ -400,6 +497,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		C07B4C002B00B6B70075770C /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C07B4C012B00B6B70075770C /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
 		F45F3BCE1E02DFA50009434E /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -411,6 +516,84 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C07B4C052B00B6B70075770C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = TestSoundsSwift/TestSoundsSwift.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestSoundsSwift/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Hori,Masaki. All rights reserved.";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JinyuMeng.TestSoundsSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C07B4C062B00B6B70075770C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = TestSoundsSwift/TestSoundsSwift.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestSoundsSwift/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Hori,Masaki. All rights reserved.";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JinyuMeng.TestSoundsSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		F45F3BD21E02DFA50009434E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -629,6 +812,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C07B4C042B00B6B70075770C /* Build configuration list for PBXNativeTarget "TestSoundsSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C07B4C052B00B6B70075770C /* Debug */,
+				C07B4C062B00B6B70075770C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F45F3BBE1E02DFA50009434E /* Build configuration list for PBXProject "MuteableWKWebView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
