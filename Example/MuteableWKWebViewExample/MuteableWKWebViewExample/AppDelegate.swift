@@ -1,9 +1,8 @@
 //
 //  AppDelegate.swift
-//  TestSoundsSwift
+//  MuteableWKWebViewExample
 //
 //  Created by Jinyu Meng on 2023/11/12.
-//  Copyright © 2023 Hori,Masaki. All rights reserved.
 //
 
 import Cocoa
@@ -15,11 +14,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet var window: NSWindow!
     @IBOutlet weak var webView: WKWebView!
-    
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
-        webView.load(.init(url: URL(string: "http://youtube.com")!))
+        webView.load(.init(url: URL(string: "https://www.youtube.com")!))
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

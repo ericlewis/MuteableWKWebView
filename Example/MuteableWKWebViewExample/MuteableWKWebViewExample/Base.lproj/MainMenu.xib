@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="22504" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22504"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="22504"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -11,15 +14,20 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="MuteableWKWebViewExample" customModuleProvider="target">
+            <connections>
+                <outlet property="webView" destination="MAJ-1a-MwL" id="NUx-6X-sU2"/>
+                <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
-                <menuItem title="MuteableWKWebView" id="1Xt-HY-uBw">
+                <menuItem title="MuteableWKWebViewExample" id="1Xt-HY-uBw">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <menu key="submenu" title="MuteableWKWebView" systemMenu="apple" id="uQy-DD-JDr">
+                    <menu key="submenu" title="MuteableWKWebViewExample" systemMenu="apple" id="uQy-DD-JDr">
                         <items>
-                            <menuItem title="About MuteableWKWebView" id="5kV-Vb-QxS">
+                            <menuItem title="About MuteableWKWebViewExample" id="5kV-Vb-QxS">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="orderFrontStandardAboutPanel:" target="-1" id="Exp-CZ-Vem"/>
@@ -33,7 +41,7 @@
                                 <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                            <menuItem title="Hide MuteableWKWebView" keyEquivalent="h" id="Olw-nP-bQN">
+                            <menuItem title="Hide MuteableWKWebViewExample" keyEquivalent="h" id="Olw-nP-bQN">
                                 <connections>
                                     <action selector="hide:" target="-1" id="PnN-Uc-m68"/>
                                 </connections>
@@ -51,7 +59,7 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                            <menuItem title="Quit MuteableWKWebView" keyEquivalent="q" id="4sb-4s-VLi">
+                            <menuItem title="Quit MuteableWKWebViewExample" keyEquivalent="q" id="4sb-4s-VLi">
                                 <connections>
                                     <action selector="terminate:" target="-1" id="Te7-pn-YzF"/>
                                 </connections>
@@ -65,7 +73,7 @@
                         <items>
                             <menuItem title="New" keyEquivalent="n" id="Was-JA-tGl">
                                 <connections>
-                                    <action selector="newWindow:" target="Voe-Tx-rLC" id="xla-42-463"/>
+                                    <action selector="newDocument:" target="-1" id="4Si-XN-c54"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Open…" keyEquivalent="o" id="IAo-SY-fd9">
@@ -623,7 +631,7 @@
                             <menuItem title="Show Sidebar" keyEquivalent="s" id="kIP-vf-haE">
                                 <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
                                 <connections>
-                                    <action selector="toggleSourceList:" target="-1" id="iwa-gc-5KM"/>
+                                    <action selector="toggleSidebar:" target="-1" id="iwa-gc-5KM"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Enter Full Screen" keyEquivalent="f" id="4J7-dP-txa">
@@ -664,7 +672,7 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                         <items>
-                            <menuItem title="MuteableWKWebView Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                            <menuItem title="MuteableWKWebViewExample Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                 <connections>
                                     <action selector="showHelp:" target="-1" id="y7X-2Q-9no"/>
                                 </connections>
@@ -673,6 +681,49 @@
                     </menu>
                 </menuItem>
             </items>
+            <point key="canvasLocation" x="200" y="121"/>
         </menu>
+        <window title="MuteableWKWebViewExample" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="335" y="390" width="480" height="360"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1055"/>
+            <view key="contentView" id="EiT-Mj-1SZ">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MAJ-1a-MwL">
+                        <rect key="frame" x="0.0" y="60" width="480" height="300"/>
+                        <wkWebViewConfiguration key="configuration">
+                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                            <wkPreferences key="preferences"/>
+                        </wkWebViewConfiguration>
+                    </wkWebView>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RQC-42-Dmv">
+                        <rect key="frame" x="402" y="13" width="65" height="32"/>
+                        <buttonCell key="cell" type="push" title="Mute" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="E3Y-JY-BTX">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="mute:" target="Voe-Tx-rLC" id="idI-J7-P4t"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="RQC-42-Dmv" secondAttribute="bottom" constant="20" symbolic="YES" id="979-oG-z27"/>
+                    <constraint firstItem="RQC-42-Dmv" firstAttribute="top" secondItem="MAJ-1a-MwL" secondAttribute="bottom" constant="20" symbolic="YES" id="FuP-mG-L6Y"/>
+                    <constraint firstItem="RQC-42-Dmv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="QmT-Xx-eSf"/>
+                    <constraint firstAttribute="trailing" secondItem="RQC-42-Dmv" secondAttribute="trailing" constant="20" symbolic="YES" id="iiV-59-O9D"/>
+                    <constraint firstItem="MAJ-1a-MwL" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" id="ins-0G-QB9"/>
+                    <constraint firstAttribute="trailing" secondItem="MAJ-1a-MwL" secondAttribute="trailing" id="pgL-ym-71x"/>
+                    <constraint firstItem="MAJ-1a-MwL" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="ttX-Xa-3sR"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="top-28-M4D"/>
+            </connections>
+            <point key="canvasLocation" x="200" y="400"/>
+        </window>
     </objects>
 </document>
