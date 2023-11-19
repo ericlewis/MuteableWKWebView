@@ -33,9 +33,7 @@ static const char *mutekey = "HMMuteKey";
 }
 
 - (void)setMute:(_WKMediaMutedState)mute {
-    
     objc_setAssociatedObject(self, mutekey, [NSNumber numberWithInteger:mute], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    
     [self _setPageMuted:mute];
 }
 
@@ -44,4 +42,10 @@ static const char *mutekey = "HMMuteKey";
     return muteVal.integerValue;
 }
 
+@end
+
+@implementation WKWebView (MWKPlayingAudio)
+- (void)getPlaying {
+    return [self _isPlayingAudio];
+}
 @end

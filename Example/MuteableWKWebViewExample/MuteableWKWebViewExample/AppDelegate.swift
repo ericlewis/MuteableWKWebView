@@ -29,12 +29,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @IBAction func mute(_ sender: NSButton) {
-        webView.isMuted.toggle()
-        if webView.isMuted {
-            sender.title = "Muted"
-        } else {
-            sender.title = "Mute"
-        }
+//        webView.isMuted.toggle()
+//        if webView.isMuted {
+//            sender.title = "Muted"
+//        } else {
+//            sender.title = "Mute"
+//        }
+        print(webView.getPlaying())
     }
     
 }

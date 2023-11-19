@@ -16,8 +16,12 @@ typedef NS_OPTIONS(NSInteger, _WKMediaMutedState) {
     _WKMediaCaptureDevicesMuted = 1 << 1,
 };
 
-@interface WKWebView (MWKMute)
+@interface WKWebView (HMMuteExtension)
 - (void)_setPageMuted:(_WKMediaMutedState)mutedState;
+@end
+
+@interface WKWebView (MWKPlayingAudio)
+- (BOOL)_isPlayingAudio;
 @end
 
 #endif /* MuteableWKWebViewPrivate_h */

@@ -12,4 +12,6 @@
 
 @property (getter=isMuted) BOOL muted;
 
+- (BOOL) getPlaying;
+
 @end
