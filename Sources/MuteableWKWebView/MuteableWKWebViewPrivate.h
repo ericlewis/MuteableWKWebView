@@ -20,12 +20,4 @@ typedef NS_OPTIONS(NSInteger, _WKMediaMutedState) {
 - (void)_setPageMuted:(_WKMediaMutedState)mutedState;
 @end
 
-@interface WKWebView (HMMuteExtension)
-- (void)setMute:(_WKMediaMutedState)mute;
-@end
-
-@interface WKWebView (NewMethodHMMuteExtension)
-- (void)NEW_HMMuteableWKWebView_setMute:(_WKMediaMutedState)mute;
-@end
-
 #endif /* MuteableWKWebViewPrivate_h */

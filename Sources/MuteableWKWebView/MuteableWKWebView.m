@@ -11,16 +11,8 @@
 
 #import <objc/runtime.h>
 
-#import "HTSymbolHook.h"
-#include "getPage.h"
-
-#import "SearchSymbol.h"
-
-typedef void (*SetMuteFunc)(void*, _WKMediaMutedState);
 
 static const char *mutekey = "HMMuteKey";
-static NSString *sSymbolName = nil;
-static SetMuteFunc sMuteFunc = NULL;
 
 @interface WKWebView (HMMuteExtensionPrivate)
 
@@ -40,59 +32,16 @@ static SetMuteFunc sMuteFunc = NULL;
     self.mute = isMuted ? _WKMediaAudioMuted : _WKMediaNoneMuted;
 }
 
-NSString *symbolName(void) {
-    if( sSymbolName ) return sSymbolName;
-    
-    static BOOL isFirst = YES;
-    if( !isFirst ) return nil;
-    isFirst = NO;
-    
-    NSArray<NSString *> *hints = @[@"WebPageProxy", @"setMuted"];
-    sSymbolName = searchSymbol(@"/System/Library/Frameworks/WebKit.framework/WebKit", hints);
-    return sSymbolName;
-}
-
-SetMuteFunc getSetMuteFunc(void) {
-    if( sMuteFunc ) return sMuteFunc;
-    
-    static BOOL isFirst = YES;
-    if( !isFirst ) return NULL;
-    isFirst = NO;
-    
-    NSString *symName = symbolName();
-    if( !symName ) return NULL;
-    
-    HTSymbolHook *hook = [HTSymbolHook symbolHookWithImageNameSuffix:@"/WebKit"];
-    sMuteFunc = (SetMuteFunc)[hook symbolPtrWithSymbolName:symName];
-    return sMuteFunc;
-}
-
 - (void)setMute:(_WKMediaMutedState)mute {
-    void *ptr = getPage(self);
-    
-    SetMuteFunc setMute = getSetMuteFunc();
-    if( !ptr || !setMute ) {
-        fprintf(stderr, "It can NOT mute on this Mac.\n");
-        return;
-    }
-    setMute(ptr, mute);
-    
-    objc_setAssociatedObject(self, mutekey, [NSNumber numberWithInteger:mute], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-- (_WKMediaMutedState)mute {
-    NSNumber *muteVal = objc_getAssociatedObject(self, mutekey);
-    return muteVal.integerValue;
-}
-
-@end
-
-/// this method use only WKWebView has _setPageMuted: method.
-/// _setPageMuted method available from macOS 10.13 and iOS 11.0.
-@implementation WKWebView (NewMethodHMMuteExtension)
-- (void)NEW_HMMuteableWKWebView_setMute:(_WKMediaMutedState)mute {
     
     objc_setAssociatedObject(self, mutekey, [NSNumber numberWithInteger:mute], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
     [self _setPageMuted:mute];
 }
+
+- (_WKMediaMutedState)mute {
+    NSNumber *muteVal = objc_getAssociatedObject(self, mutekey);
+    return muteVal.integerValue;
+}
+
 @end
