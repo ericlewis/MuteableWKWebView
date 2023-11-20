@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="22504" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="22154" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22504"/>
-        <plugIn identifier="com.apple.WebKit2IBPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22154"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="22154"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,6 +16,7 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="MuteableWKWebViewExample" customModuleProvider="target">
             <connections>
+                <outlet property="isPlayingAudioIndicator" destination="Xaj-rb-MFs" id="vdT-BL-tsR"/>
                 <outlet property="webView" destination="MAJ-1a-MwL" id="NUx-6X-sU2"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
@@ -687,7 +688,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="480" height="360"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1055"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="875"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -709,11 +710,17 @@
                             <action selector="mute:" target="Voe-Tx-rLC" id="idI-J7-P4t"/>
                         </connections>
                     </button>
+                    <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xaj-rb-MFs">
+                        <rect key="frame" x="20" y="20" width="27" height="19"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSTouchBarAudioOutputVolumeHighTemplate" id="1NK-bs-Qas"/>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="RQC-42-Dmv" secondAttribute="bottom" constant="20" symbolic="YES" id="979-oG-z27"/>
                     <constraint firstItem="RQC-42-Dmv" firstAttribute="top" secondItem="MAJ-1a-MwL" secondAttribute="bottom" constant="20" symbolic="YES" id="FuP-mG-L6Y"/>
                     <constraint firstItem="RQC-42-Dmv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="QmT-Xx-eSf"/>
+                    <constraint firstItem="Xaj-rb-MFs" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" symbolic="YES" id="Zh4-t7-32K"/>
+                    <constraint firstAttribute="bottom" secondItem="Xaj-rb-MFs" secondAttribute="bottom" constant="25" id="c7K-2V-ejg"/>
                     <constraint firstAttribute="trailing" secondItem="RQC-42-Dmv" secondAttribute="trailing" constant="20" symbolic="YES" id="iiV-59-O9D"/>
                     <constraint firstItem="MAJ-1a-MwL" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" id="ins-0G-QB9"/>
                     <constraint firstAttribute="trailing" secondItem="MAJ-1a-MwL" secondAttribute="trailing" id="pgL-ym-71x"/>
@@ -726,4 +733,7 @@
             <point key="canvasLocation" x="200" y="400"/>
         </window>
     </objects>
+    <resources>
+        <image name="NSTouchBarAudioOutputVolumeHighTemplate" width="27" height="19"/>
+    </resources>
 </document>

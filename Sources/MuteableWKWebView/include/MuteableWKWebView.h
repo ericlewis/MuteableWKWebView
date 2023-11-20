@@ -12,6 +12,6 @@
 
 @property (getter=isMuted) BOOL muted;
 
-- (BOOL) getPlaying;
+- (BOOL)isPlayingAudio;
 
 @end

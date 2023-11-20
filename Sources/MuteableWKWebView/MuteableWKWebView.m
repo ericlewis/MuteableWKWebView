@@ -45,7 +45,7 @@ static const char *mutekey = "HMMuteKey";
 @end
 
 @implementation WKWebView (MWKPlayingAudio)
-- (void)getPlaying {
+- (void)isPlayingAudio {
     return [self _isPlayingAudio];
 }
 @end
