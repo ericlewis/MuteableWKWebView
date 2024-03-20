@@ -19,12 +19,7 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "MuteableWKWebView",
-            exclude: ["HTSymbolHook/HTSymbolHookExample/"],
-            publicHeadersPath: "include",
-            cxxSettings: [
-                .headerSearchPath("HTSymbolHook/HTSymbolHook/"),
-                .headerSearchPath("HTSymbolHook/HTSymbolHook/mach_override/"),
-            ]
+            publicHeadersPath: "include"
         ),
     ]
 )
